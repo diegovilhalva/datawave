@@ -1,0 +1,85 @@
+#navbar {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px 20px;
+    width: 100%;
+    transition: var(--transition);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    overflow: hidden;
+}
+
+#navbar .route-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 1.4rem;
+}
+
+#navbar .route{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "Inter";
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#navbar .route:hover {
+    color: var(--primary);
+}
+
+#navbar .route.active {
+    color: var(--primary);
+}
+
+#navbar .socials .icon {
+    border-radius: 100%;
+    background: var(--bg-base) !important;
+}
+
+#navbar .socials .icon:hover {
+    color: var(--primary);
+}
+
+#navbar .menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 40px;
+    background: var(--bg-base);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+#navbar .menu:hover{
+    color: var(--primary);
+}
+
+
+@media screen and (max-width:940px) {
+    #navbar .socials{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width:800px) {
+    #navbar .route-wrapper{
+        display: none;
+    }
+
+    #navbar .menu{
+        display: flex;
+    }
+}

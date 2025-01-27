@@ -1,0 +1,18 @@
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.socials .icon {
+    font-size: 20px;
+    color: var(--primary);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.socials .icon:hover {
+    transform: scale(1.2);
+    background: var(--primary) !important;
+    color: var(--color-white);
+}

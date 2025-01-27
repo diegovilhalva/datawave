@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
-  --primary: #00aaff; 
+  --primary: #00aaff;
   --bg-base: #121212;
   --bg-secondary: #1c1c1c;
   --bg-accent: #2a2a2e;
@@ -12,3 +15,158 @@
   --color-warning: #ffbb55;
   --transition: all 0.4s ease-out 0s;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  color: var(--text-color);
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+section {
+  overflow: hidden;
+}
+
+
+button,
+input {
+  background-color: transparent;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.blur {
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+
+.btn {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 51px;
+  background: var(--bg-accent);
+  display: inline-block;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+
+.btn.primary {
+  background-color: var(--primary);
+  color: var(--color-white);
+}
+
+.btn:hover {
+  transform: translateY(2px);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+.section-header {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-header h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+  color: var(--primary);
+}
+
+
+.section-header h2 {
+  font-size: 34px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+
+.line-clamp-2,
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight {
+  position: absolute;
+  width: 322px;
+  height: 308px;
+  background: var(--primary);
+  background: linear-gradient(190deg,var(--primary) 0%,transparent 100%);
+  border-radius: 50%;
+  -webkit-filter:blur(50px);
+  filter: blur(50px);
+  z-index: 1;
+}
+
+
+@media screen and (max-width:700px) {
+  .section-header{
+    font-size: 25px;
+  }
+}
+

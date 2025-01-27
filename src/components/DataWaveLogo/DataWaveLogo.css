@@ -1,0 +1,9 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.logo svg {
+    color: var(--primary)
+}
