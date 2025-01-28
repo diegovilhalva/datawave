@@ -1,3 +1,4 @@
+import Achievement from "./segments/Achievement"
 import Hero from "./segments/Hero"
 import Navbar from "./segments/Navbar"
 
@@ -7,6 +8,7 @@ const App = () => {
     <div>
       <Navbar  />
       <Hero/>
+      <Achievement/>
     </div>
   )
 }
