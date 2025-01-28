@@ -13,6 +13,20 @@
     overflow: hidden;
 }
 
+#navbar.drop {
+    position: fixed;
+    animation: drop 1s ;
+}
+
+@keyframes drop {
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 0;
+    }
+}
+
 #navbar .route-wrapper {
     display: flex;
     align-items: stretch;
