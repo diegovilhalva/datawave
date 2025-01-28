@@ -11,3 +11,33 @@
     transition: var(--transition);
     padding: 20px;
 }
+
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .close-btn{
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.sidebar .route{
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: var(--transition);
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: "Inter";
+}
+
+.sidebar .route:hover{
+    color: var(--primary);
+}

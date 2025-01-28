@@ -5,10 +5,15 @@ import { Link } from "react-scroll"
 import Socials from "../../components/Socials"
 import { CgMenuRight } from "react-icons/cg"
 import Sidebar from "../../components/Sidebar"
+import { useState } from "react"
 const Navbar = () => {
+  const [open,setOpen] = useState(false)
   return (
     <>
-      <Sidebar />
+      <Sidebar open={open} onClose={() => setOpen(!open)} />
+        {open  && (
+          <div className="sidebar-overlay" onClick={() => setOpen(!open)} />
+        )}
       <nav id="navbar">
         <DataWaveLogo />
         <div className="route-wrapper">
@@ -18,7 +23,7 @@ const Navbar = () => {
           ))}
         </div>
         <Socials />
-        <div className="menu">
+        <div className="menu" onClick={() => setOpen(!open)}>
           <CgMenuRight />
         </div>
       </nav>
