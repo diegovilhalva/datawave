@@ -6,6 +6,7 @@ import Portfolio from "./segments/Portfolio"
 import Services from "./segments/Services"
 import "swiper/css"
 import Testimonials from "./segments/Testimonials"
+import Contact from "./segments/Contact"
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Services/>
       <Portfolio/>
       <Testimonials />
+      <Contact/>
     </div>
   )
 }
