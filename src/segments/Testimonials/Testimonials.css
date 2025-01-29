@@ -1,0 +1,54 @@
+#testimonials {
+    position: relative;
+}
+
+#testimonials .spotlight {
+    height: 200px;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#testimonials .testimonials-wrapper {
+    margin-top: 40px;
+}
+
+#testimonials .testimonial{
+    height: auto;
+    text-align: center;
+    background: var(--bg-secondary);
+    padding: 30px 20px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 1.5rem;
+}
+
+#testimonials .testimonial .top {
+    flex: 1;
+    color: var(--text-muted);
+}
+
+#testimonials .testimonial .star-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    color: var(--color-warning);
+}
+
+
+#testimonials .testimonial .profile {
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+#testimonials .testimonial .job-title {
+    color: var(--text-muted);
+}
