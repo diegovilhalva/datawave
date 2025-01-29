@@ -130,7 +130,7 @@ img {
 .line-clamp-2,
 .line-clamp-3 {
   display: -webkit-box;
-  -webkit-box-orient: hidden;
+  -webkit-box-orient:vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }

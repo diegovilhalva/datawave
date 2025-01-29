@@ -1,0 +1,38 @@
+#blog {
+    background: var(--bg-secondary);
+}
+
+#blog .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+#blog .blog-card{
+    background: var(--bg-base);
+    overflow:hidden;
+    border-radius: 1.5rem;
+}
+
+#blog .blog-card .top {
+    height: 300px;
+}
+
+#blog .blog-card .bottom {
+    padding: 20px;
+}
+
+
+@media screen and (max-width:900px){
+    #blog .blogs-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media screen and (max-width:600px){
+    #blog .blogs-grid{
+        grid-template-columns: 100%;
+    }
+}

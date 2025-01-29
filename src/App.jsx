@@ -7,6 +7,7 @@ import Services from "./segments/Services"
 import "swiper/css"
 import Testimonials from "./segments/Testimonials"
 import Contact from "./segments/Contact"
+import Blog from "./segments/Blog"
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Services/>
       <Portfolio/>
       <Testimonials />
+      <Blog/>
       <Contact/>
     </div>
   )
