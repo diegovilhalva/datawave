@@ -1,0 +1,36 @@
+#portfolio {
+    background: var(--bg-secondary);
+}
+
+#portfolio .portfolio-wrapper {
+    margin: 70px 0;
+    height: 100%;
+}
+
+#portfolio .portfolio {
+    height: auto;
+    border-radius: 1.5rem;
+    background: var(--bg-base);
+    box-shadow: 0 0 30px  0 rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+#portfolio .image-wrapper {
+    height: 200px;
+}
+
+#portfolio .content-wrapper {
+    padding: 20px;
+}
+
+
+#portfolio .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#portfolio .description {
+    color: var(--text-muted);
+}
+
