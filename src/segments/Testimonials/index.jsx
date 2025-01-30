@@ -3,9 +3,30 @@ import "./Testimonials.css"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { clientsReviews } from "../../data"
 import { convertHexToRGBA, cssPerfectShape, starDecoder } from "../../util"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { useRef } from "react"
+gsap.registerPlugin(ScrollTrigger)
 const Testimonials = () => {
+    const container = useRef()
+    useGSAP(() => {
+        gsap.timeline({
+            delay: 0.5,
+            scrollTrigger: {
+                trigger: container.current,
+                start: "20% bottom",
+                end: "bottom top"
+            }
+        })
+            .fromTo(["#testimonials .section-header h3", "#testimonials .section-header h2",
+                "#testimonials .testimonial","#testimonials .spotlight"],
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, stagger: 0.5 })
+
+    }, { scope: container })
     return (
-        <section id="testimonials">
+        <section id="testimonials" ref={container}>
             <div className="container">
                 <div className="spotlight"/>
                 <div className="section-header">

@@ -5,8 +5,9 @@ import { Link } from "react-scroll"
 import Socials from "../../components/Socials"
 import { CgMenuRight } from "react-icons/cg"
 import Sidebar from "../../components/Sidebar"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { convertHexToRGBA } from "../../util"
+import gsap from "gsap"
 const Navbar = () => {
   const [open,setOpen] = useState(false)
   const [drop,setDrop] = useState(false)
@@ -23,6 +24,13 @@ const Navbar = () => {
     window.addEventListener("scroll",dropNavbar)
     return () => window.removeEventListener("scroll",dropNavbar)
   })
+
+  useEffect(() => {
+    gsap.timeline({delay:0.5})
+    .fromTo("#navbar .logo",{x:-50,opacity:0},{x:0,opacity:1})
+    .fromTo("#navbar .socials",{x:-50,opacity:0},{x:0,opacity:1})
+    .fromTo("#navbar .route-wrapper .route",{x:-50,opacity:0},{x:0,opacity:1,stagger:0.2})
+  },[])
 
   return (
     <>
