@@ -36,7 +36,7 @@ const Navbar = () => {
     <>
       <Sidebar open={open} onClose={() => setOpen(!open)} />
         {open  && (
-          <div className="sidebar-overlay" onClick={() => setOpen(!open)} style={{background:convertHexToRGBA('--bg-base',0.8)}} />
+          <div className="sidebar-overlay" onClick={() => setOpen(!open)} style={{background: drop ? convertHexToRGBA('--bg-base',0.8):"trans"}} />
         )}
       <nav id="navbar" className={drop ? "blur drop":""}>
         <DataWaveLogo />
