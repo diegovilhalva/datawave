@@ -8,6 +8,7 @@ import "swiper/css"
 import Testimonials from "./segments/Testimonials"
 import Contact from "./segments/Contact"
 import Blog from "./segments/Blog"
+import Footer from "./segments/Footer"
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Testimonials />
       <Blog/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }
